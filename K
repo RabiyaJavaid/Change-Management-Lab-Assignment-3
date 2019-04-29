@@ -1,1 +1,32 @@
 sabri mandaki hjhjk
+
+    import java.util.Scanner;
+import java.util.regex.*;
+
+/**
+ *
+ * @author Administrator
+ */
+public class labTask {
+    
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		   Scanner hum = new Scanner(System.in);
+		   System.out.println("Enter declaration statement");
+		   String user = hum.nextLine();
+		    String regex="if([A-Za-z][A-Za-z0-9]*)(>|<|==|<=|>=)([A-Za-z][A-Za-z0-9]*)";
+		    Pattern p = Pattern.compile(regex);
+		    Matcher m = p.matcher(user);
+		    if(m.matches()) {
+		    	 System.out.println("valid if statement");
+		 	   
+		    }
+		    else {
+		 	   System.out.println("Syntax Error");
+		    }
+	}
+
+}
+
